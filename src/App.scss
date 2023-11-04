@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin screen($device) {
+  @if $device == tablet {
+    @media (max-width: 991px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == mobile {
+    @media (max-width: 575px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == pc {
+    @media (min-width: 992px) {
+      @content; //code nam trong nay
+    }
+  }
+}
+
+html {
+  background: #fff;
+
+  .center {
+    display: block;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: lightblue;
+  }
+
+  .row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.register {
+    padding-top: 50px;
+    height: 100vh;
+  .register-form {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 500px;
+    height: 550px;
+    margin: 0 auto;
+    @include screen(mobile) {
+      width: 100%;
+    }
+
+    .form {
+      margin-top: 30px;
+    }
+
+    .register-heading {
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+}
+
+.login {
+  padding-top: 100px;
+  height: 100vh;
+  .login-form {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    @include screen(mobile) {
+      width: 100%;
+    }
+
+    .form {
+      margin-top: 30px;
+    }
+
+    .register-heading {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .form-help {
+      margin-left: 30px;
+      margin-top: 15px;
+
+      span {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.input_search {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

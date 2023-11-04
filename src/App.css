@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #fff;
+}
+html .center {
+  display: block;
+  margin: 0 auto;
+}
+html a {
+  text-decoration: none;
+  color: lightblue;
+}
+html .row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.register {
+  padding-top: 50px;
+  height: 100vh;
+}
+.register .register-form {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 500px;
+  height: 550px;
+  margin: 0 auto;
+}
+@media (max-width: 575px) {
+  .register .register-form {
+    width: 100%;
+  }
+}
+.register .register-form .form {
+  margin-top: 30px;
+}
+.register .register-form .register-heading {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.login {
+  padding-top: 100px;
+  height: 100vh;
+}
+.login .login-form {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 575px) {
+  .login .login-form {
+    width: 100%;
+  }
+}
+.login .login-form .form {
+  margin-top: 30px;
+}
+.login .login-form .register-heading {
+  text-align: center;
+  padding-top: 50px;
+}
+.login .login-form .form-help {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.login .login-form .form-help span {
+  margin-right: 20px;
+}
+
+.input_search {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}/*# sourceMappingURL=App.css.map */

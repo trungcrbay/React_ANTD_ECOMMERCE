@@ -1,0 +1,13 @@
+@mixin screen($device) {
+  @if $device == tablet {
+    @media (max-width: 991px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == mobile {
+    @media (max-width: 575px) {
+      @content; //code nam trong nay
+    }
+  }
+}

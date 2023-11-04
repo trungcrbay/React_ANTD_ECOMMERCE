@@ -1,0 +1,116 @@
+html {
+  background: #fff;
+}
+
+.home {
+  padding: 15px;
+}
+@media (min-width: 992px) {
+  .home .res-filter {
+    display: none;
+  }
+}
+.home li {
+  list-style: none;
+}
+.home .filter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .filter-heading .filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.home .filter-heading .filter .icon {
+  color: blue;
+}
+.home .home-product {
+  margin-left: 50px;
+}
+@media (max-width: 575px) {
+  .home .home-product {
+    margin-left: 0px;
+  }
+}
+.home .home-product .product {
+  margin-left: 30px;
+  margin-top: -10px;
+}
+@media (max-width: 575px) {
+  .home .home-product .product {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 575px) {
+  .home .home-product .product .tab {
+    margin-left: 0px;
+  }
+}
+.home .home-product .customize-row {
+  display: flex;
+  gap: 20px 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home .home-product .customize-row .column {
+  width: calc(20% - 8px);
+  height: 100%;
+}
+@media (max-width: 575px) {
+  .home .home-product .customize-row .column {
+    width: calc(50% - 8px);
+    height: auto;
+  }
+}
+.home .home-product .customize-row .column .wrapper {
+  padding: 10px;
+}
+.home .home-product .customize-row .column .wrapper .thumbnail {
+  max-height: 200px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.home .home-product .customize-row .column .wrapper .thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home .home-product .customize-row .column .wrapper .price {
+  margin-top: 10px;
+}
+.home .home-product .customize-row .column .wrapper .rating {
+  display: flex;
+  gap: 10px;
+  align-content: center;
+  margin-top: 10px;
+}
+@media (max-width: 575px) {
+  .home .home-product .customize-row .column .wrapper .rating {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+.home .home-product .customize-row .column:hover {
+  box-shadow: 0 0.0625rem 20px 0 rgba(0, 0, 0, 0.05);
+  transform: translateY(-0.0625rem);
+}
+.home .home-product .customize-row .empty-book {
+  width: 100%;
+}
+.home .home-product .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+@media (max-width: 575px) {
+  .home .home-product .pagination .ant-pagination-item,
+  .home .home-product .pagination .ant-pagination-prev,
+  .home .home-product .pagination .ant-pagination-next {
+    width: 50px;
+    border-radius: 0px;
+  }
+}/*# sourceMappingURL=home.css.map */

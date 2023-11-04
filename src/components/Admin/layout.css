@@ -1,0 +1,22 @@
+.layout-admin .admin-header {
+  height: 50px;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.layoutActionIcon {
+  font-size: 20px;
+}
+.layoutActionIcon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}/*# sourceMappingURL=layout.css.map */

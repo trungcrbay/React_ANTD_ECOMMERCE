@@ -1,0 +1,145 @@
+@mixin screen($device) {
+  @if $device == tablet {
+    @media (max-width: 991px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == mobile {
+    @media (max-width: 575px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == pc {
+    @media (min-width: 992px) {
+      @content; //code nam trong nay
+    }
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html {
+  background: #fff;
+}
+
+.home {
+  padding: 15px;
+
+  .res-filter {
+    @include screen(pc) {
+      display: none;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .filter-heading {
+    @include flexCenter;
+    .filter {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .icon {
+        color: blue;
+      }
+    }
+  }
+
+  .home-product {
+    margin-left: 50px;
+    @include screen(mobile) {
+      margin-left: 0px;
+    }
+    .product {
+      margin-left: 30px;
+      margin-top: -10px;
+      @include screen(mobile) {
+        margin-left: 0px;
+      }
+      .tab {
+        @include screen(mobile) {
+          margin-left: 0px;
+        }
+      }
+    }
+
+    .customize-row {
+      display: flex;
+      gap: 20px 10px;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .column {
+        width: calc(20% - 8px);
+        height: 100%;
+        @include screen(mobile) {
+          width: calc(50% - 8px);
+          height: auto;
+        }
+        .wrapper {
+          padding: 10px;
+
+          .thumbnail {
+            max-height: 200px;
+            max-width: 200px;
+            margin: 0 auto;
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              background-color: white;
+              object-fit: contain;
+            }
+          }
+
+          .price {
+            margin-top: 10px;
+          }
+
+          .rating {
+            display: flex;
+            gap: 10px;
+            align-content: center;
+            margin-top: 10px;
+            @include screen(mobile) {
+              gap: 0;
+              justify-content: space-between;
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: 0 0.0625rem 20px 0 rgba(0, 0, 0, 0.05);
+          -webkit-transform: translateY(-0.0625rem);
+          transform: translateY(-0.0625rem);
+        }
+      }
+
+      .empty-book{
+        width: 100%;      
+      }
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+
+      .ant-pagination-item,
+      .ant-pagination-prev,
+      .ant-pagination-next {
+        @include screen(mobile) {
+          width: 50px;
+          border-radius: 0px;
+        }
+      }
+    }
+  }
+}

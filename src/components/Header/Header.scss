@@ -1,0 +1,56 @@
+@mixin screen($device) {
+  @if $device == tablet {
+    @media (max-width: 991px) {
+      @content; //code nam trong nay
+    }
+  }
+
+  @if $device == mobile {
+    @media (max-width: 575px) {
+      @content; //code nam trong nay
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+
+  .bars {
+    width: 80px;
+  }
+
+  .space-admin {
+    @include screen(mobile) {
+      display: none;
+    }
+  }
+
+  .size_input {
+    width: 60%;
+    height: 50%;
+  }
+
+  /*Tablet*/
+  @media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+      display: none;
+    }
+  }
+
+  /*PC*/
+  @media (min-width: 1023px) {
+    .hide-on-pc {
+      display: none;
+    }
+  }
+
+  /*Mobile*/
+  @media (max-width: 739px) {
+    .hide-on-mobile {
+      display: none;
+    }
+  }
+}

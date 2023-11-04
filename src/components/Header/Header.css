@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 10px;
+  /*Tablet*/
+  /*PC*/
+  /*Mobile*/
+}
+.header .bars {
+  width: 80px;
+}
+@media (max-width: 575px) {
+  .header .space-admin {
+    display: none;
+  }
+}
+.header .size_input {
+  width: 60%;
+  height: 50%;
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .header .hide-on-tablet {
+    display: none;
+  }
+}
+@media (min-width: 1023px) {
+  .header .hide-on-pc {
+    display: none;
+  }
+}
+@media (max-width: 739px) {
+  .header .hide-on-mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=Header.css.map */
