@@ -51,7 +51,7 @@ const ViewDetail = (props) => {
     <div className="view-detail-book">
       {dataBook ?
       <Row gutter={24}>
-      <Col md={12}>
+      <Col md={12} xs={24}>
         <ImageGallery
           items={images}
           showPlayButton={false}
@@ -61,7 +61,7 @@ const ViewDetail = (props) => {
           renderRightNav={() => <></>}
         />
       </Col>
-      <Col md={12}>
+      <Col md={12} xs={24}>
         <div className="author">
           Tác giả: <a href="#">{dataBook?.author}</a>{" "}
         </div>

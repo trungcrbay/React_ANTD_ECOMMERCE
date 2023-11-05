@@ -4,7 +4,7 @@ const BookLoader = () => {
   return (
     <div>
       <Row gutter={[20,20]}>
-        <Col md={12}>
+        <Col md={12} xs={24}>
           <Skeleton.Input active block style={{width:'100%',height:'350px'}} />
           <div
             style={{ display: "flex", justifyContent: "center", gap: "10px",marginTop:'15px' }}
@@ -14,7 +14,7 @@ const BookLoader = () => {
             <Skeleton.Image active />
           </div>
         </Col>
-        <Col md={12}>
+        <Col md={12} xs={24}>
         <Skeleton paragraph/>
         <Skeleton paragraph />
         <div>
