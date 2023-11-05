@@ -34,9 +34,9 @@ import ModalInfo from "../Admin/Book/ModalInfor";
 
 const Header = (props) => {
   const [open, setOpen] = useState(false);
-  const {searchTerm, setSearchTerm} = props;
-  console.log(searchTerm)
-  const [isOpenModalInfo,setIsOpenModalInfo] = useState(false);
+  const { searchTerm, setSearchTerm } = props;
+  console.log(searchTerm);
+  const [isOpenModalInfo, setIsOpenModalInfo] = useState(false);
   const user = useSelector((state) => state.account.user);
   const carts = useSelector((state) => state.order.carts); //lay gia tri tu redux
   const navigate = useNavigate();
@@ -65,21 +65,24 @@ const Header = (props) => {
 
   const handleOpenModalUpdateInfor = () => {
     setIsOpenModalInfo(true);
-  }
+  };
 
   const items = [
     {
       key: "1",
       label: (
-        <label style={{ cursor: "pointer" }} onClick={() => navigate('/')}>
+        <label style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
           Trang chủ
         </label>
-      )
+      ),
     },
     {
       key: "2",
       label: (
-        <label style={{ cursor: "pointer" }} onClick={handleOpenModalUpdateInfor}>
+        <label
+          style={{ cursor: "pointer" }}
+          onClick={handleOpenModalUpdateInfor}
+        >
           Quản lý tài khoản
         </label>
       ),
@@ -87,7 +90,10 @@ const Header = (props) => {
     {
       key: "3",
       label: (
-        <label style={{ cursor: "pointer" }} onClick={() => navigate('/order/history')}>
+        <label
+          style={{ cursor: "pointer" }}
+          onClick={() => navigate("/order/history")}
+        >
           Lịch sử mua hàng
         </label>
       ),
@@ -139,12 +145,18 @@ const Header = (props) => {
             </div>
           );
         })}
+        <button className="pay-items" onClick={() => navigate('/order')}>Mua ngay</button>
       </div>
     );
   };
   return (
     <div className="header">
-      {isOpenModalInfo === true && <ModalInfo isOpenModalInfo={isOpenModalInfo} setIsOpenModalInfo={setIsOpenModalInfo}/>}
+      {isOpenModalInfo === true && (
+        <ModalInfo
+          isOpenModalInfo={isOpenModalInfo}
+          setIsOpenModalInfo={setIsOpenModalInfo}
+        />
+      )}
       <FaBars
         onClick={showDrawer}
         style={{ fontSize: "30px" }}
@@ -152,12 +164,30 @@ const Header = (props) => {
       />
       {/* MOBILE Drawer */}
       <Drawer title="Menu" placement="right" onClose={onClose} open={open}>
-        <p onClick={() => navigate('/')} style={{marginTop:'10px',cursor: "pointer"}}>Trang chủ</p>
-        <p onClick={handleOpenModalUpdateInfor} style={{marginTop:'10px',cursor: "pointer"}}>Quản lý tài khoản</p>
-        <p style={{ cursor: "pointer",marginTop:'10px' }} onClick={() => handleLogOut()}>
+        <p
+          onClick={() => navigate("/")}
+          style={{ marginTop: "10px", cursor: "pointer" }}
+        >
+          Trang chủ
+        </p>
+        <p
+          onClick={handleOpenModalUpdateInfor}
+          style={{ marginTop: "10px", cursor: "pointer" }}
+        >
+          Quản lý tài khoản
+        </p>
+        <p
+          style={{ cursor: "pointer", marginTop: "10px" }}
+          onClick={() => handleLogOut()}
+        >
           Đăng xuất
         </p>
-        <p onClick={() => navigate('/order/history')} style={{marginTop:'10px',cursor: "pointer"}}>Lịch sử mua hàng</p>
+        <p
+          onClick={() => navigate("/order/history")}
+          style={{ marginTop: "10px", cursor: "pointer" }}
+        >
+          Lịch sử mua hàng
+        </p>
       </Drawer>
       <img src={Logo} width={"70px"} className="hide-on-mobile" />
       <Input
@@ -166,7 +196,7 @@ const Header = (props) => {
         placeholder="What are you looking for?"
         prefix={<UserOutlined />}
         value={searchTerm}
-        onChange={(e)=> setSearchTerm(e.target.value)}
+        onChange={(e) => setSearchTerm(e.target.value)}
         width={"50%"}
       />
       <br />

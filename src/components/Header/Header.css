@@ -1,3 +1,13 @@
+.pay-items {
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  background: #ee4d2d;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   align-items: center;
