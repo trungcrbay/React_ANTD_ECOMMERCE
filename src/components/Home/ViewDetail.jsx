@@ -9,6 +9,7 @@ import BookLoader from "./BookLoader";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { doAddBookAction } from "../../redux/order/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 const ViewDetail = (props) => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const ViewDetail = (props) => {
   console.log(dataBook);
   const [currentQuantity , setCurrentQuantity] = useState(1); 
   const images = dataBook?.items ?? [];
+  const navigate = useNavigate();
   
   const handleChangeButton = (type) => {
     if(type === 'MINUS'){
@@ -110,7 +112,7 @@ const ViewDetail = (props) => {
             <BsCartPlus className="icon-cart" />
             <span>Thêm vào giỏ hàng</span>
           </button>
-          <button className="now">Mua ngay</button>
+          <button className="now" onClick={() => navigate('/order')}>Mua ngay</button>
         </div>
       </Col>
     </Row>
