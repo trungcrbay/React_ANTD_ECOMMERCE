@@ -1,4 +1,4 @@
-*** Base React Test Fresher | Udemy Hỏi Dân IT ***
+*** Welcome to my Ecommerce Website ***
 
 - React 18
 - React Router 6
