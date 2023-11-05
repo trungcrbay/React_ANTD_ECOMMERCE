@@ -13,7 +13,6 @@ html .center {
 }
 html a {
   text-decoration: none;
-  color: lightblue;
 }
 html .row {
   display: flex;
