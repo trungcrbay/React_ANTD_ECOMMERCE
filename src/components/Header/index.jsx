@@ -25,8 +25,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { doLogoutAction } from "../../redux/account/accountSlide";
 import { callLogout } from "../../services/api";
-import DarkMode from "../../DarkMode";
-import "../../DarkMode.css";
 import PopOver from "./PopOver";
 import ContentPopOver from "./PopOver";
 import { Footer } from "antd/es/layout/layout";
