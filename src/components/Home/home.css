@@ -85,7 +85,7 @@ html {
 .home .home-product .customize-row .column .wrapper .rating {
   display: flex;
   gap: 10px;
-  align-content: center;
+  align-items: center;
   margin-top: 10px;
 }
 @media (max-width: 575px) {

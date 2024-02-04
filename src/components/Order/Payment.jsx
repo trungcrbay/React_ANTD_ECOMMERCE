@@ -3,7 +3,6 @@ import {
   Row,
   Steps,
   Button,
-  Checkbox,
   Form,
   Input,
   Radio,
@@ -17,7 +16,6 @@ import { DeleteOutlined } from "@ant-design/icons";
 import {
   doDeleteCartAction,
   doPlaceOrderAction,
-  doUpdateCartAction,
 } from "../../redux/order/orderSlice";
 import TextArea from "antd/es/input/TextArea";
 import { useNavigate } from "react-router-dom";
@@ -65,7 +63,7 @@ const Payment = () => {
     console.log('Gọi API callPlaceOrder'); // Thêm log ở đây
     if (res && res.data) {
       message.success("Đặt hàng thành công ! ");
-      dispatch(doPlaceOrderAction());
+      dispatch(doPlaceOrderAction()); //update cart = 0 after buying
       navigate('/order/success');
     } else {
       notification.error({
@@ -228,7 +226,6 @@ const Payment = () => {
                 <Button
                   type="primary"
                   htmlType="submit"
-                  onClick={() => form.submit()}
                 >
                   Mua Hàng ({carts?.length ?? 0})
                 </Button>

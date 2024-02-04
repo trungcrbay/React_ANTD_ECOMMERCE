@@ -4,12 +4,10 @@ import {
   Avatar,
   Badge,
   Drawer,
-  Menu,
   Dropdown,
   Space,
   message,
   Popover,
-  Button,
 } from "antd";
 import {
   UserOutlined,
@@ -25,9 +23,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { doLogoutAction } from "../../redux/account/accountSlide";
 import { callLogout } from "../../services/api";
-import PopOver from "./PopOver";
-import ContentPopOver from "./PopOver";
-import { Footer } from "antd/es/layout/layout";
 import ModalInfo from "../Admin/Book/ModalInfor";
 
 const Header = (props) => {
